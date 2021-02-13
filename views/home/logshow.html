@@ -1,0 +1,29 @@
+{{extend '../common/mainframe.html'}}
+
+{{block 'head'}}
+	<link rel="stylesheet" href="/common/css/common.css"/>
+	<link rel="stylesheet" href="/home/css/logshow.css"/>
+{{/block}}
+
+{{block 'content'}}
+	<div class="container">
+		{{include './component/wheader.html'}}
+		<div class="fill"></div>
+		<div class="body">
+			{{include './component/mululisttpl.html'}}	
+			<div id="content">
+				{{include './component/contenttpl.html'}}
+			</div>
+			{{include './component/commenttpl.html'}}
+		</div>
+		<footer class="footer">
+			Copyright ©www.wangyyang.ink &nbsp;&nbsp; 黑ICP备<a href="http://www.beian.miit.gov.cn/">20004224</a>
+		</footer>
+	</div>
+{{/block}}
+
+{{block 'fscript'}}
+	<script src="/common/js/ajax.js"></script>
+	<script src="/home/js/logshow.js"></script>
+{{/block}}
+

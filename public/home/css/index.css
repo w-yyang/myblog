@@ -1,0 +1,153 @@
+
+.container {
+	height: 100vh;
+	width: 100vw;
+	min-width: 1200px;
+	background-image: url('/home/images/bgcimg.webp');
+	background-repeat: no-repeat;
+	background-size: 100vw 100vh;
+	position: relative;
+}
+
+.header {
+	display: flex;
+	width: 100vw;
+	min-width: 1000px;
+	height: 70px;
+	position: fixed;
+	z-index: 10;
+	justify-content: center;
+	align-items: center;
+}
+
+header:after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: '';
+	display: block;
+	width: 100vw;
+	height: 70px;
+	background-color: #CDC9C9;
+	opacity: 0.4;
+	z-index: -100;
+}
+
+.header .h-left {
+	flex: 1;
+	height: 70px;
+	font-size: 36px;
+	font-weight: 800;
+	color: #97FFFF;
+	text-shadow: 3px 1px;
+	line-height: 60px;
+	margin-left: 70px;
+}
+
+.header .h-right {
+	flex: 1;
+	height: 40px;
+	width: 60%;
+}
+
+.header .h-right ul {
+	height: 40px;
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+}
+
+.header .h-right ul li {
+	flex: 1;
+	width: 20%;
+	height: 40px;
+	float: left;
+	text-align: center;
+	font-size: 21px;
+	color: #fff;
+}
+
+.header .h-right ul li a:hover {
+	font-size: 28px;
+	color: #97FFFF;
+}
+
+.header .h-right ul li a {
+	color: #fff;
+	line-height: 40px;
+}
+
+.card {
+	position: absolute;
+	width: 400px;
+	height: 500px;
+	background-color: rgba(155, 155, 155, 0.4);
+	right: 200px;
+	top: 120px;
+	border-radius: 10px;
+	animation-name: cardmove;
+	animation-duration: 4s;
+}
+
+@keyframes cardmove {
+	from {
+		transform: rotateY(90deg);
+	}
+
+	to {
+		transform: rotateY(360deg);
+	}
+}
+
+.card .photo {
+	width: 180px;
+	height: 210px;
+	margin: 20px auto 0px;
+}
+
+.card .photo img {
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	opacity: 0.8;
+}
+
+.card .motto {
+	height: 100px;
+	margin-left: 60px;
+	margin-right: 60px;
+}
+
+.card .motto p {
+	font-style: italic;
+	font-size: 1.5em;
+	height: 50px;
+	line-height: 50px;
+	text-align: left;
+	color: #F0F8FF;
+	text-shadow: 2px 3px #C7C7C7;
+}
+
+.card .motto p:nth-of-type(2) {
+	text-align: right;
+}
+
+.card .connect {
+	position: relative;
+	height: 70px;
+	width: 200px;
+	left: 50%;
+	top: 30px;
+	transform: translateX(-50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-items: center;
+}
+
+.card .connect i {
+	display: block;
+	width: 100px;
+	text-align: center;
+	height: 50px;
+}

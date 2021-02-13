@@ -1,0 +1,112 @@
+.wrapper {
+	height: 100vh;
+	width: 100vw;
+	background-image: url('/admin/login/images/qqq.webp');
+	background-size: 100vw 100vh;
+}
+
+.wrapper .login {
+	position: absolute;
+	width: 500px;
+	height: 440px;
+	left: 50%;
+	top: 45%;
+	transform: translate(-50%, -50%);
+	border-radius: 10px;
+}
+
+.wrapper .login:after {
+	content: '';
+	position: absolute;
+	width: 500px;
+	height: 450px;
+	background-color: rgba(254, 222, 222, 0.4);
+	left: 0%;
+	top: 0%;
+	z-index: -100;
+	border-radius: 8px;
+}
+
+.wrapper .login .h-container {
+	height: 220px;
+	display: flex;
+	justify-content: center;
+}
+
+.wrapper .login .h-container img {
+	height: 180px;
+	width: 180px;
+	margin-top: 30px;
+	border-radius: 50%;
+}
+
+.wrapper .login .b-container {
+	height: 220px;
+	position: relative;
+}
+
+.wrapper .login .b-container input {
+	border-radius: 4px;
+	box-sizing: border-box;
+	padding-left: 40px;
+	font-size: 20px;
+	position: absolute;
+	width: 330px;
+	height: 40px;
+	float: left;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.wrapper .login .b-container span {
+	display: block;
+}
+
+.wrapper .login .b-container .ico-yonghu {
+	position: absolute;
+	left: 96px;
+	top: 27px;
+}
+
+.wrapper .login .b-container .ico-mima {
+	position: absolute;
+	left: 96px;
+	top: 94px;
+}
+
+
+.wrapper .login .b-container .user {
+	top: 10%;
+}
+
+.wrapper .login .b-container .pass {
+	top: 40%;
+}
+
+#adminlogin {
+	position: absolute;
+	width: 100px;
+	height: 40px;
+	border-radius: 8px;
+	left: 70%;
+	transform: translateX(-50%);
+	bottom: 20px;
+}
+
+#back {
+	position: absolute;
+	width: 100px;
+	height: 40px;
+	border-radius: 8px;
+	left: 18%;
+	bottom: 20px;
+}
+
+input {
+	opacity: 0.5;
+	background-color: rgba(254, 222, 222);
+}
+
+button {
+	opacity: 0.5;
+}

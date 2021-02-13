@@ -1,0 +1,86 @@
+input {
+	outline: none;
+	border: none;
+	border-bottom: 1.5px solid #98FB98;
+	background-color: rgba(155, 155, 155, 0);
+	color: #97EEEE;
+}
+
+textarea {
+	outline: none;
+	background-color: rgba(155, 155, 155, 0.4);
+	color: #97EEEE;
+}
+
+label {
+	color: white;
+	font-size: 1.3em;
+}
+
+.main-content {
+	padding-left: 10px;
+	position: relative;
+}
+
+.right-content .main-content .title {
+	margin: 15px 0;
+}
+
+#title {
+	width: 240px;
+	height: 30px;
+	padding-left: 24px;
+	font-size: 16px;
+}
+
+.right-content .main-content .content {
+	margin: 15px 0;
+
+}
+
+.right-content .main-content .content label {
+	position: relative;
+	top: -400px;
+}
+
+#content {
+	padding: 24px;
+	resize: none;
+	font-size: 16px;
+}
+
+.imgupload {
+	width: 40px;
+	position: relative;
+	height: 10px;
+	bottom: 10px;
+}
+
+.imgupload button {
+	width: 80px;
+	height: 32px;
+	position: absolute;
+	left: 350px;
+	top: -20px;
+	background-color: #97EEEE;
+}
+
+#author {
+	width: 240px;
+	height: 30px;
+	padding-left: 24px;
+	font-size: 16px;
+}
+
+.right-content .main-content .submit {
+	margin: 15px 0;
+}
+
+#submit {
+	width: 90px;
+	height: 36px;
+	position: relative;
+	left: 76px;
+	background-color: #97EEEE;
+}
+

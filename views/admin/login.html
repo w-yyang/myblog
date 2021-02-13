@@ -1,0 +1,33 @@
+{{extend '../common/mainframe.html'}}
+
+{{block 'head'}}
+	<link rel="stylesheet" href="/common/css/common.css"/>
+	<link rel="stylesheet" href="/admin/login/css/login.css">
+{{/block}}
+
+{{block 'content'}}
+	<div class="wrapper">
+		<div class="login">
+			<div class="h-container">
+				<img src="/admin/login/images/h-img.jpg" alt="">
+			</div>
+			<div class="b-container">
+				<span class="ico-yonghu">
+					<i class="iconfont icon-yonghu"></i>
+				</span>
+				<input type="text" class="user" id="username">
+				<span class="ico-mima">
+					<i class="iconfont icon-mima"></i>
+				</span>
+				<input type="password" class="pass" id="password">
+				<button id="back">首页</button>
+				<button id="adminlogin">登录</button>
+			</div>
+		</div>
+	</div>
+{{/block}}
+
+{{block 'fscript'}}
+	<script type="text/javascript" src="/admin/login/js/login.js"></script>
+{{/block}}
+

@@ -1,0 +1,27 @@
+.art-manage {
+	height: 430px;
+	overflow: auto;
+}
+
+.art-manage li {
+	height: 80px;
+	background-color: rgba(155, 155, 155, 0.7);
+	margin: 12px 15px;
+}
+
+.art-manage li .con-title {
+	float: left;
+	width: 600px;
+}
+
+.art-manage li span {
+	float: left;
+	display: block;
+}
+
+.art-manage li .art-del {
+	width: 60px;
+	height: 36px;
+	background-color: #FF4500;
+	border-radius: 6px;
+}

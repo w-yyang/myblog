@@ -1,0 +1,32 @@
+{{extend '../common/mainframe.html'}}
+
+{{block 'head'}}
+	<link rel="stylesheet" href="/common/css/common.css"/>
+	<link rel="stylesheet" href="/home/css/index.css"/>
+{{/block}}
+
+{{block 'content'}}
+	<div class="container">
+		{{include './component/wheader.html'}}
+		<main class="card">
+			<div class="photo">
+				<img src="/home/images/h-img.jpg" alt="">
+			</div>
+			<div class="motto">
+				<p>你可以一无所有，</p>
+				<p>但绝不能一无是处。</p>
+			</div>
+			<div class="connect">
+				<i class="iconfont icon-youxiang"></i>
+				<i class="iconfont icon-github"></i>
+			</div>
+		</main>
+		<footer class="footer">
+			Copyright ©www.wangyyang.ink &nbsp;&nbsp; 黑ICP备<a href="http://www.beian.miit.gov.cn/">20004224</a>
+		</footer>
+	</div>
+{{/block}}
+
+{{block 'fscript'}}
+	<script type="text/javascript" src="/home/js/index.js"></script>
+{{/block}}

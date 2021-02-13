@@ -1,0 +1,63 @@
+textarea {
+	resize: none;
+	padding-left: 30px;
+	font-size: 20px;
+	padding-top: 20px;
+	margin-left: 20px;
+	outline: none;
+	background-color: rgba(155, 155, 155, 0.4);
+	color: #97EEEE;
+}
+
+input {
+	border: none;
+	border-bottom: 1.5px solid #98FB98;
+	outline: none;
+	width: 400px;
+	height: 50px;
+	font-size: 20px;
+	padding-left: 30px;
+	margin-left: 20px;
+	background-color: rgba(155, 155, 155, 0);
+	color: #97EEEE;
+}
+
+button {
+	width: 70px;
+	height: 40px;
+	background-color: #97EEEE;
+}
+
+label {
+	display: block;
+	font-size: 1.4em;
+	margin-top: 12px;
+	color: white;
+}
+
+.wrapper {
+	margin-left: 20px;
+}
+
+.title {
+	display: flex;
+	margin: 20px 0;
+}
+
+.content {
+	display: flex;
+}
+
+.author {
+	display: flex;
+	margin: 20px 0;
+}
+
+.author input {
+	width: 330px;
+}
+
+.author button {
+	margin-left: 20px;
+	margin-top: 5px;
+}

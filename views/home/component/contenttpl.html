@@ -1,0 +1,26 @@
+<div class="content">
+	<div class="content-wrapper">
+		<header>
+			<span class="title">
+				<i>{{firstCon.title}}</i>
+			</span>
+			<span class="time">{{firstCon.date}}</span>
+		</header>
+		<hr>
+		<article>
+			<div class="main-context">
+				{{@firstCon.content}}
+			</div>
+			<div class="img">
+				{{if firstCon.imgurl}}
+					<img src="{{firstCon.imgurl}}" alt="">
+				{{/if}}
+			</div>
+		</article>
+		<hr>
+		<footer>
+			<span>{{firstCon.author}}</span>
+		</footer>
+		<hr>
+	</div>
+</div>

@@ -1,0 +1,42 @@
+{{extend '../common/mainframe.html'}}
+
+{{block 'head'}}
+  <link rel="stylesheet" href="/common/css/common.css">
+  <link rel="stylesheet" href="/admin/manager/css/manager.css">
+  <link rel="stylesheet" href="/admin/manager/css/artupdate.css">
+{{/block}}
+
+{{block 'content'}}
+  {{include './component/headtpl.html'}}
+  <div class="bgcimg"></div>
+  <div class="container">
+    {{include './component/leftlist.html'}}
+    <div class="right-content">
+        <div class="main-content">
+          <div class="wrapper">
+            <div class="title">
+              <label for="">标&nbsp;题：</label>
+              <input type="text" name="title" id="title">
+            </div>
+            <div class="content">
+              <label for="content">正&nbsp;文：</label>
+              <textarea name="content" id="content" cols="50" rows="20"></textarea>
+            </div>
+            <div class="author">
+              <label for="">作&nbsp;者：</label>
+              <input type="text" id="author" name="author">
+              <button id="updatecon">修&nbsp;改</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    {{include './component/foottpl.html'}}
+  </div>
+{{/block}}
+
+{{block 'fscript'}}
+  <script src="/common/js/datastore.js"></script>
+  <script src="/common/js/ajax.js"></script>
+  <script src="/admin/manager/js/articleUpdate.js"></script>
+{{/block}}
+
