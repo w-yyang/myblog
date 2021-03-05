@@ -8,6 +8,7 @@ var updatebtn = document.querySelector('#updatecon');
 	if(dealartid){
 		let backRes = await ajax(`/admin/manager/getdealart?id=${dealartid}`);
 		let result = JSON.parse(backRes);
+		console.log(result);
 		title.value = result.title;
 		author.value = result.author;
 		content.value = result.content;

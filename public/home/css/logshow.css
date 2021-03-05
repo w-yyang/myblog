@@ -10,19 +10,12 @@ html {
 .container {
 	height: 800px;
 	width: 100vw;
-	min-width: 1200px;
+	/*min-width: 1200px;*/
 	background-repeat: no-repeat;
 	background-size: 100vw 100vh;
 	background-attachment: fixed;
 	background-image: url('/home/images/bgtree.webp');
 	position: relative;
-}
-
-.fill {
-	width: 100vw;
-	height: 70px;
-	opacity: 1;
-	float: left;
 }
 
 .header {
@@ -33,7 +26,7 @@ html {
 	z-index: 10;
 	justify-content: center;
 	align-items: center;
-	min-width: 1200px;
+	/*min-width: 1200px;*/
 }
 
 header:after {
@@ -93,26 +86,35 @@ header:after {
 	line-height: 40px;
 }
 
+.fill {
+	width: 100vw;
+	height: 70px;
+	opacity: 1;
+}
+
 .container .body {
 	width: 100vw;
-	height: 800px;
-	min-width: 1200px;
+	height: calc(100vh - 100px);
+	/*min-width: 1200px;*/
 	position: relative;
+	overflow: auto;
 }
 
 .container .body .catalog {
 	width: 20%;
-	min-width: 270px;
 	position: fixed;
 	overflow-x: hidden;
 	z-index: 10;
-	top: 70px;
+	top: 90px;
 }
 
 .container .body .catalog .cat-wrapper {
 	margin-left: 20px;
 	animation-name: lefttoshow;
 	animation-duration: 3s;
+	background-color: rgba(200, 200, 200, .4);
+	padding-top: 10px;
+	border-radius: 6px;
 }
 
 @keyframes lefttoshow {
@@ -145,14 +147,16 @@ header:after {
 	color: #cdcdcd;
 }
 
+.container .body .cata-btn {
+	display: none;
+}
+
 .container .body .content {
 	box-sizing: border-box;
 	overflow-x: hidden;
-	width: 55%;
-	min-width: 700px;
+	width: 80%;
+	/*min-width: 700px;*/
 	margin-left: 20%;
-	float: left;
-	height: 700px;
 }
 
 .container .body .content .content-wrapper {
@@ -211,130 +215,232 @@ header:after {
 }
 
 .container .body .comment {
-	overflow-x: hidden;
-	width: 25%;
-	min-width: 360px;
-	position: absolute;
-	top: 70px;
-	left: 75%;
-	box-sizing: border-box;
-	animation-name: righttoshow;
-	animation-duration: 3s;
+	padding-top: 14px;
+	width: 80%;
+	margin-left: 20%;
 }
 
-@keyframes righttoshow {
-	from {
-		margin-left: 25%;
-	}
-
-	to {
-		margin-left: 0%;
-	}
+.container .body .comment .write-wrapper {
+	margin-left: 8%;
+	margin-top: 30px;
+	background-color: rgba(124,124,124, 0.5);
+	width: 900px;
+	padding-top: 8px;
+	padding-bottom: 10px;
+	border-radius: 6px;
 }
 
 label {
+	margin-left: 10px;
 	margin-top: 16px;
 	width: 100%;
 	height: 26px;
 	font-size: 20px;
 	font-weight: 500;
 	line-height: 20px;
-	margin-left: 30px;
-}
-
-#netname {
-	height: 30px;
-	padding-left: 20px;
-	width: 100%;
-	margin-left: 30px;
-	margin-right: 120px;
-	margin-top: 8px;
-	border-radius: 4px;
-	outline: none;
-	opacity: 0.3;
-}
-
-#send {
-
-	height: 40px;
-}
-
-#clear {
-
-	height: 40px;
-}
-
-textarea {
-	padding-left: 20px;
-	padding-top: 10px;
-	box-sizing: border-box;
-	width: 100%;
-	margin-right: 30%;
-	margin-top: 14px;
-	margin-left: 30px;
-	resize: none;
-	font-size: 20px;
-	color: #8B8B83;
-	border-radius: 4px;
-	outline: none;
-	opacity: 0.3;
-}
-
-.container .body .comment .write-wrapper {
-	height: 360px;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-}
-
-.container .body .comment .write-wrapper .send {
-	flex: 1;	
-	height: 24px;
-	width: 60px;
-	margin-left: 30px;
-	margin-right: 10px;
-	margin-top: 4px;
-	background-color: #97FFFF;
-}
-
-.container .body .comment .write-wrapper .clear {
-	flex: 1;	
-	height: 24px;	
-	width: 60px;
-	margin-right: 114px;
-	margin-left: 40px;
-	margin-top: 4px;
-	background-color: #97FFFF;
-}
-
-.container .body .comment .comment-list {
-	height: 340px;
-}
-
-.container .body .comment .comment-list li {
-	line-height: 40px;
-	height: 40px;
-	width: 100%;
-	margin: 6px 0px 6px 30px;
-	width: 70%;
-	padding-left: 10px;
-	border-radius: 4px;
-	position: relative;
+	display: block;
 	color: #97FFFF;
 }
 
-.container .body .comment .comment-list li:after {
-	content: '';
-	display: block;
-	position: absolute;
-	width: 86%;
-	height: 28px;
-	background-color: #BDBDBD;
-	left: 0px;
-	top: 6px;
-	opacity: 0.3;
+#netname {
+	height: 40px;
+	padding-left: 20px;
+	width: 600px;
+	margin-top: 8px;
+	outline: none;
+	border: none;
+	border-bottom: 2px solid #97FFFF;
+	margin-left: 20px;
+	font-size: 1.2em;
+	background-color: rgba(150,150,150, 0);
+	color: 	#FFF8DC;
 }
 
+#comment {
+	margin-top: 8px;
+	margin-left: 20px;
+	border-radius: 6px;
+	width: 740px;
+	height: 100px;
+	resize: none;
+	padding-left: 10px;
+	outline: none;
+	padding-top: 6px;
+	float: left;
+	background-color: rgba(150,150,150, 0.4);
+	color: 	#FFF8DC;
+}
+
+.container .body .comment .write-wrapper .btn-wrapper {
+	float: left;
+	width: 90px;
+	height: 100px;
+	margin-top: 10px;
+}
+
+#send {
+	width: 80px;
+	margin-left: 10px;
+	height: 40px;
+	border-radius: 3px;
+}
+
+#clear {
+	width: 80px;
+	margin-left: 10px;
+	height: 40px;
+	margin-top: 10px;
+	border-radius: 3px;
+}
+
+.container .body .comment .write-wrapper .clear {
+	clear: both;
+}
+
+.container .body .comment .comment-list {
+	width: 900px;
+	margin-left: 8%;
+	padding-top: 10px;
+}
+
+.container .body .comment .comment-list li {
+	width: 740px;
+	height: 110px;
+	background-color: rgba(124,124,124, 0.6);
+	margin-top: 20px;
+	margin-left: 30px;
+	border-radius: 8px;
+}
+
+.container .body .comment .comment-list li .name {
+	font-size: 1.4em;
+	margin-left: 20px;
+	padding-top: 8px;
+	color: #97FFFF;
+}
+
+.container .body .comment .comment-list li p {
+	margin-left: 50px;
+	font-size: 1.2em;
+	color: white;
+	margin-top: 14px;
+}
+
+@media (max-width: 768px) {
+	.header {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		height: 100px;
+	}
+
+	.header::after {
+		display: none;
+	}
+
+	.header .h-left {
+		margin-top: -10px;
+		width: 100%;
+		height: 50px;
+		text-align: center;
+		line-height: 40px;
+		margin: 0px;
+		flex: none;
+		font-size: 40px;
+		font-weight: 600;
+	}
+
+	.header .h-right {
+		width: 100%;
+		height: 50px;
+		flex: none;
+	}
+
+	.header .h-right ul {
+		width: 100%;
+		height: 50px;
+		display: flex;
+		flex: 0;
+	}
+
+	.container .body .catalog {
+		position: relative;
+		width: 90%;
+		margin: 0 5%;
+		top: 10px;
+		display: visible;
+	}
+
+	.container .body .catalog .cat-wrapper ul {
+		height: auto;
+	}
+
+	.container .body .cata-btn {
+		width: 10%;
+		margin: 20px 5% 0;
+		display: block;
+		margin-left: 83%;
+		height: 32px;
+		padding-left: 2px;
+		padding-top: 0.5px;
+		background-color: rgba(124,124,124, 0.6);
+		border-radius: 4px;
+	}
+
+	.container .body .cata-btn span {
+		display: block;
+		width: 36px;
+		height: 3px;
+		background-color: white;
+		margin: 7px 0;
+	}
+
+	#content .content {
+		margin: 0 5%;
+		width: 90%;
+	}
+
+	.container .body .comment {
+		width: 84%;
+		margin: 0 8%;
+	}
+
+	.container .body .comment .write-wrapper {
+		width: 100%;
+		margin: 0;
+	}
+
+	#netname {
+		width: 90%;
+	}
+
+	#comment {
+		width: 90%;
+		float: left;
+	}
+
+	.container .body .comment .write-wrapper .btn-wrapper {
+		width: 100%;
+		padding: 0 10px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	#clear {
+		margin: 0;
+	}
+
+	.container .body .comment .comment-list {
+		width: 100%;
+		margin: 0;
+	}
+
+	.container .body .comment .comment-list li {
+		width: 100%;
+		margin-left: 0;
+	}
+}
 
 
 

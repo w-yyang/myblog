@@ -10,6 +10,8 @@ admin.post('/login', require('./admin/login.js'));
 
 admin.get('/manager', require('./admin/manager.js'));
 
+admin.get('/manager/manage', require('./admin/managePage'));
+
 admin.get('/manager/artlistpage', require('./admin/articleListPage'));
 
 admin.get('/manager/artupdatepage', require('./admin/articleUpdatePage'));

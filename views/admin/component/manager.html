@@ -1,0 +1,10 @@
+<ul class="art-manage">
+  {{each article}}
+    <li>
+      <div data-id="{{$value._id}}" class="con-title">{{$value.title}}</div>
+      <span>发布日期:</span>
+      <button class="art-del" onclick="remove(this)">删&nbsp;除</button>
+    </li>
+  {{/each}}
+</ul>
+

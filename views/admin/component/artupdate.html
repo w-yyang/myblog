@@ -1,0 +1,42 @@
+<div class="wrapper">
+  <div class="title">
+    <label for="">标&nbsp;题：</label>
+    <input type="text" name="title" id="title">
+  </div>
+  <div class="content">
+    <label for="content">正&nbsp;文：</label>
+    <textarea name="content" id="content" cols="50" rows="20"></textarea>
+  </div>
+  <div class="author">
+    <label for="">作&nbsp;者：</label>
+    <input type="text" id="author" name="author">
+    <button id="updatecon">修&nbsp;改</button>
+  </div>
+</div>
+<script type="text/javascript">
+  var title = document.getElementById('title');
+  var author = document.getElementById('author');
+  var content = document.querySelector('#content');
+  var updatebtn = document.querySelector('#updatecon');
+
+  (async function(){
+    let dealartid = getData('willdealid');
+    if(dealartid){
+      let backRes = await ajax(`/admin/manager/getdealart?id=${dealartid}`);
+      let result = JSON.parse(backRes);
+      console.log(result);
+      title.value = result.title;
+      author.value = result.author;
+      content.value = result.content;
+    }else{
+      return;
+    }
+  })()
+
+  updatebtn.addEventListener('click', async function(){
+    let dealartid = getData('willdealid');
+    let msg = 'id=' + dealartid + '&content=' + content.value;
+    console.log('发送成功 更新文本');
+    let back = await ajax(`/admin/manager/artupdate`, "post", msg);
+  });
+</script>

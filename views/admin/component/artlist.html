@@ -1,0 +1,10 @@
+<ul class="art-list">
+  {{each searchCon}}
+  <li onclick="selectElem(this)"">
+    <div class="con-title" data-id="{{$value._id}}">{{$value.title}}</div>
+    <!-- <span>发布日期:{{$value.date}}</span> -->
+    <!-- 日期字符串需要更改 -->
+  </li>
+  {{/each}}             
+</ul>
+

@@ -8,7 +8,7 @@ module.exports = async (req, res) => {
 	for(let i = 0;i < searchCon.length;i++){
 		searchCon[i].date = searchCon[i].date.toString().slice(0, 12);
 	}
-	res.render('admin/artlist.html',{
+	res.render('admin/component/artlist.html',{
 		searchCon: searchCon,
 		username: req.session.username
 	});

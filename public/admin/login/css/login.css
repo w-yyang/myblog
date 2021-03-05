@@ -40,9 +40,16 @@
 	border-radius: 50%;
 }
 
+.wrapper .login .show-msg {
+	text-align: center;
+	height: 20px;
+	color: red;
+}
+
 .wrapper .login .b-container {
 	height: 220px;
 	position: relative;
+	margin-top: -16px;
 }
 
 .wrapper .login .b-container input {
@@ -109,4 +116,36 @@ input {
 
 button {
 	opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+	.wrapper .login {
+		width: 90%;
+		/*margin: 0 5%;*/
+	}
+
+	.wrapper .login:after {
+		width: 90%;
+		margin: 0 5%;
+	}
+
+	.wrapper .login .b-container {
+		width: 100%;
+	}
+
+	.wrapper .login .b-container .ico-yonghu {
+		position: absolute;
+		left: 44px;
+		top: 27px;
+	}
+
+	.wrapper .login .b-container .ico-mima {
+		position: absolute;
+		left: 44px;
+		top: 94px;
+	}
+
+	.wrapper .login .b-container input {
+		width: 80%;
+	}
 }

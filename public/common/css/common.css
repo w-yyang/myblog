@@ -1,3 +1,25 @@
+.container .footer {
+  color: #F0F0F0;
+  display: block;
+  position: absolute;
+  text-align: center;
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
+  line-height: 30px;
+}
+
+.footer a {
+  text-decoration: underline;
+  color: #97FFFF;
+}
+
+@media (max-width: 768) {
+  .container .footer {
+    display: none;
+  }
+}
+
 @font-face {font-family: "iconfont";
   src: url('//at.alicdn.com/t/font_2328297_05ruswmv7gu9.eot?t=1612502084770'); /* IE9 */
   src: url('//at.alicdn.com/t/font_2328297_05ruswmv7gu9.eot?t=1612502084770#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -62,24 +84,6 @@
 .icon-sousuo:before {
   content: "\e603";
 }
-
-
-.container .footer {
-  color: #F0F0F0;
-  display: block;
-  position: absolute;
-  text-align: center;
-  bottom: 0px;
-  height: 30px;
-  width: 100%;
-  line-height: 30px;
-}
-
-.footer a {
-  text-decoration: underline;
-  color: #97FFFF;
-}
-
 
 * {
 	margin: 0;

@@ -9,6 +9,7 @@ const content = document.querySelector('article');
 const author = document.querySelector('footer span');
 const time = document.querySelector('header .time');
 const comList = document.querySelector('#commentList');
+const muluShow = document.querySelector('.cata-btn');
 
 (async function(){
 	getContextList().then(resolve => {
@@ -28,8 +29,12 @@ const comList = document.querySelector('#commentList');
 })()
 
 send.onclick = function(){
-	let comment = edit.value;
-	let name = netname.value;
+	let comment = edit.value.trim();
+	let name = netname.value.trim();
+	if(comment == '' || name == ''){
+		alert('网名或评论不可为空');
+		return;
+	}
 	let params = `name=${name}&comment=${comment}`;
 	var xhr = new XMLHttpRequest();
 	xhr.open('post', '/home/comment');
@@ -63,8 +68,12 @@ async function getComList(){
 				.then(value => {
 					return JSON.parse(value);
 				});
-	for(let m = commentList.length - 1;m >= 0;m--){
-		comStr += `<li>${commentList[m].commentStr}</li>`;
+	console.log(commentList);
+	for(let m = 0;m <= commentList.length - 1;m++){
+		comStr += `<li>
+			<div class="name">${commentList[m].name}：</div>
+			<p>${commentList[m].commentStr}</p>
+		</li>`;
 	}
 	return comStr;
 }
@@ -81,5 +90,20 @@ async function getContextList(){
 	}
 	return listStr;
 }
+
+var muluS = true;
+
+muluShow.onclick = function(){
+	var status = document.querySelector('.catalog');
+	if(muluS){
+		status.style.display = "none";
+		muluS = false;
+	}else{
+		status.style.display = "block";
+		muluS = true;
+	}
+}
+
+
 
 

@@ -1,0 +1,31 @@
+<form action="/admin/manager/artadd" method="post" enctype="multipart/form-data">
+    <div class="title">
+        <label for="title">文章标题:&nbsp;</label>
+        <input type="text" name="title" id="title">
+    </div>
+    <div class="content">
+        <label for="artcontent">文章内容:&nbsp;</label>
+        <textarea name="artcontent" id="content" cols="55" rows="20"></textarea>
+    </div>
+    <div class="author">
+        <label for="author">文章作者:&nbsp;</label>
+        <input type="text" name="author" id="author">
+    </div>     
+    <div class="imgupload">
+        <button id="uploadfile">图片上传</button>
+        <input id="file" type="file" name="uploadimg" style="display: none;">
+    </div> 
+    <div class="submit">
+        <button id="submit" type="submit">上传</button>
+    </div>  
+</form>
+<script type="text/javascript">
+    const btn = document.getElementById('uploadfile');
+
+    btn.onclick = function(event){
+        console.log(123456);
+        document.getElementById('file').click();
+        event.stopPropagation();
+        return false;
+    };
+</script>

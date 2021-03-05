@@ -30,7 +30,7 @@ module.exports = async (req, res) => {
 								author: author
 							}); 
 	newArticle.save();
-	res.send({
-		msg: 'success'
+	res.render('admin/admin.html', {
+		username: req.session.username
 	});
 };

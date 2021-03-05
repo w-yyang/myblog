@@ -1,3 +1,4 @@
 module.exports = (req, res) => {
-	res.render('admin/login.html');
+	var msg = '';
+	res.render('admin/login.html', {msg: msg});
 };

@@ -15,6 +15,7 @@ logi.onclick = function(){
 		xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 		xhr.send(sendMsg);
 		xhr.onload = function(){
+			history.go(0);
 			document.write(xhr.responseText);
 		}
 	}
